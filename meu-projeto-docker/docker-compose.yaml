@@ -1,0 +1,11 @@
+
+
+services:
+  apache-server:
+    image: httpd:latest
+    container_name: meu-servidor-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/local/apache2/htdocs/
+    restart: always
